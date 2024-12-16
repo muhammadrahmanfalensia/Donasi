@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Donasi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Donasi untuk Kebaikan</h1>
+        <p>Bantu sesama dengan donasi Anda!</p>
+    </header>
+
+    <main>
+        <section class="donation-form">
+            <h2>Formulir Donasi</h2>
+            <form id="donationForm" method="POST" action="#">
+                <label for="name">Nama Anda:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email Anda:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="amount">Jumlah Donasi:</label>
+                <select id="amount" name="amount" required>
+                    <option value="50000">Rp 50.000</option>
+                    <option value="100000">Rp 100.000</option>
+                    <option value="200000">Rp 200.000</option>
+                    <option value="other">Jumlah Lain</option>
+                </select>
+
+                <input type="text" id="otherAmount" name="otherAmount" placeholder="Masukkan jumlah lainnya" style="display:none;">
+
+                <label for="paymentMethod">Metode Pembayaran:</label>
+                <select id="paymentMethod" name="paymentMethod" required>
+                    <option value="bank">Transfer Bank</option>
+                    <option value="e-wallet">E-Wallet</option>
+                    <option value="credit">Kartu Kredit</option>
+                </select>
+
+                <button type="submit">Kirim Donasi</button>
+            </form>
+        </section>
+
+        <section id="confirmation" class="hidden">
+            <h2>Terima Kasih atas Donasi Anda!</h2>
+            <p>Donasi Anda sangat berarti bagi kami. Semoga amal baik Anda dibalas dengan kebaikan.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Website Donasi</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
